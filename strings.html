@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercises</title>
+    </head>
+    <script>
+       
+        // compare
+        let st1="priya";
+        let st2="roopa";
+        function istrue(st1,st2){
+            return st1.toUpperCase() === st2.toUpperCase();
+        }
+        console.log(istrue(st1,st2));
+        for(let char of "anu"){
+            document.write(char+",");
+        }
+        // strings are immutable but we can change the string
+        let str3="we";
+        str3='W'+str3[1];
+        console.log(str3);
+        let str = 'Widget with id';
+
+            alert( str.indexOf('Widget') ); 
+            alert( str.indexOf('widget') ); 
+
+            alert( str.indexOf("id") ); 
+            // includes
+            alert( "Widget".includes("id") ); 
+            alert( "Widget".includes("id", 1) );
+            alert( "Widget".includes("id", 3) );
+            // starts with ends with
+            alert( "Widget".startsWith("Wid") );
+            alert( "Widget".endsWith("get") ); 
+            alert("priya".endsWith("ri"));
+            // splice ,starts and end string
+            let st = "stringify";
+            alert( st.slice(0, 5) ); 
+            alert( st.slice(0, 1) ); 
+            alert( st.slice(1) ); 
+            // substring vs splice
+            let str4 = "stringify";
+
+                // these are same for substring
+                alert( str4.substring(2, 6) ); // "ring"
+                alert( str4.substring(6, 2) ); // "ring"
+
+                // ...but not for slice:
+                alert( str4.slice(2, 6) ); //"ring"
+                alert( str4.slice(6, 2) ); //no output
+                // codePointAt(position)
+                alert( "g".codePointAt(0) );
+              // String.fromCodePoint(codenumber);
+                 alert( String.fromCodePoint(90) ); // Z
+                 
+
+                // generator function
+                function* gen()  
+                {  
+                yield 100;  
+                yield;  
+                yield 200;  
+                }  
+                // Calling the Generator Function  
+                var mygen = gen();  
+                console.log(mygen.next().value);  
+                console.log(mygen.next().value);  
+                console.log(mygen.next().value);  
+                // return in generator
+                function* myGen()  {  
+                    yield 'First yield statement';  
+                    yield 'Second yield statement';  
+                    return 'Return statement';  
+                    yield 'Second yield statement';  
+                    }  
+                    let genobj = myGen();  
+                    console.log(genobj.next());    
+                    console.log(genobj.next());   
+                    console.log(genobj.next()); 
+                    console.log(genobj.next());
+                
+            // IIFE
+            function hello()   
+            {   
+                console.log("normal");   
+            };   
+            // Regular Function execution.   
+            hello();   
+                
+            // IIFE creation and execution.   
+            (function() { console.log("iife"); })();
+
+
+
+
+
+    </script>
+</html>
